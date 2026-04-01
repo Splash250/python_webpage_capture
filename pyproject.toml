@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-webpage-capture"
+version = "0.1.0"
+description = "Minimal scaffold for a Python webpage screenshot capture CLI."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "Maestro" }
+]
+dependencies = [
+  "playwright>=1.53,<2"
+]
+
+[project.scripts]
+python-webpage-capture = "python_webpage_capture.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
